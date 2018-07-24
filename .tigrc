@@ -1,0 +1,5 @@
+# commitのハッシュを表示
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# 常に縦に分割
+set vertical-split = yes
