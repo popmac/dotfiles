@@ -21,6 +21,9 @@ call dein#add('scrooloose/nerdtree')
 " タブの使用時に使いやすくする
 call dein#add('jistr/vim-nerdtree-tabs')
 
+" Gitを便利に使う
+call dein#add('tpope/vim-fugitive')
+
 " Ruby向けにendを自動挿入してくれる
 call dein#add('tpope/vim-endwise')
 
@@ -53,6 +56,8 @@ set cmdheight=2
 set laststatus=2
 " ステータス行に表示させる情報の指定(どこからかコピペしたので細かい意味はわかっていない)
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+" ステータス行に現在のgitブランチを表示する
+set statusline+=%{fugitive#statusline()}
 " ウインドウのタイトルバーにファイルのパス情報等を表示する
 set title
 " インデントに色が付いているのが分かるように、暗い背景色に合わせた配色にする
@@ -87,6 +92,9 @@ colorscheme desert
 
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
+
+" grep検索の実行後にQuickFix Listを表示する
+autocmd QuickFixCmdPost *grep* cwindow
 
 """"""""""""""""""""""""""""""
 
