@@ -93,6 +93,10 @@ set backspace=indent,eol,start
 set clipboard+=unnamed
 " 縦に分割した時に右側にファイルを開くようにする
 set splitright
+" 検索結果をハイライト表示する
+set hlsearch
+" 検索ワードの最初の文字を入力した時点で検索を開始する
+set incsearch
 
 " 構文ごとに文字色を変化させる
 " syntax on
