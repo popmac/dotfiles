@@ -38,6 +38,9 @@ call dein#add('itchyny/lightline.vim')
 " solarizedのカラースキーマ
 " call dein#add('altercation/vim-colors-solarized')
 
+" ファイル検索を便利にする
+call dein#add('ctrlpvim/ctrlp.vim')
+
 call dein#end()
 
 " Required:
