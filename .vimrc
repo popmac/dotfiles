@@ -32,6 +32,9 @@ call dein#add('nathanaelkane/vim-indent-guides')
 " 行末の半角スペースを可視化
 call dein#add('bronson/vim-trailing-whitespace')
 
+" ステータスラインの見た目を綺麗にする
+call dein#add('itchyny/lightline.vim')
+
 " solarizedのカラースキーマ
 " call dein#add('altercation/vim-colors-solarized')
 
@@ -95,6 +98,11 @@ highlight LineNr ctermfg=darkyellow
 
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
+
+" lightlineのカラースキーマ
+let g:lightline = {
+      \ 'colorscheme': 'wombat'
+      \ }
 
 """"""""""""""""""""""""""""""
 
