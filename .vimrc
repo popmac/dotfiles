@@ -41,6 +41,9 @@ call dein#add('itchyny/lightline.vim')
 " ファイル検索を便利にする
 call dein#add('ctrlpvim/ctrlp.vim')
 
+" ヤンクの履歴を使用するのを便利にする
+call dein#add('LeafCage/yankround.vim')
+
 call dein#end()
 
 " Required:
@@ -141,6 +144,24 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 " ESCキーを2回押すと終了する
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
+"""""""""""""""""""""""""
+" yankroundの設定
+"""""""""""""""""""""""""
+" READMEに記載されていた基本設定
+" ctrlpのキーマッピングと衝突するのでコメントアウト
+" 代わりに自分でコマンドを追加
+
+" nmap p <Plug>(yankround-p)
+" xmap p <Plug>(yankround-p)
+" nmap P <Plug>(yankround-P)
+" nmap gp <Plug>(yankround-gp)
+" xmap gp <Plug>(yankround-gp)
+" nmap gP <Plug>(yankround-gP)
+" nmap <C-p> <Plug>(yankround-prev)
+" nmap <C-n> <Plug>(yankround-next)
+
+nnoremap <leader>y :<C-u>Unite yankround<CR>
 
 """""""""""""""""""""""""
 " 自動的に閉じ括弧を入力
