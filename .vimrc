@@ -89,6 +89,8 @@ set shiftwidth=2
 set whichwrap=b,s,h,l,<,>,[,]
 " Vimでファイルを開いた時に既に入力されている文字がdeleteできなくなったため設定
 set backspace=indent,eol,start
+" ヤンクしたらクリップボードにコピー
+set clipboard+=unnamed
 " 縦に分割した時に右側にファイルを開くようにする
 set splitright
 
