@@ -1,2 +1,4 @@
 " ヤンクしたらクリップボードにコピー
 set clipboard+=unnamed
+" vimのモードを表示
+set showmode
