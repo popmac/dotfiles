@@ -121,6 +121,9 @@ let g:lightline = {
 " vimを立ち上げた時に自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 
+" ctrlpで隠しファイルを検索対象にする
+let g:ctrlp_show_hidden = 1
+
 " vimファイルを開いた時にtreeを表示
 " autocmd VimEnter * execute 'NERDTree'
 
