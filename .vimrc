@@ -19,7 +19,7 @@ call dein#add('Shougo/unite.vim')
 " ファイルをtree表示してくれる
 call dein#add('scrooloose/nerdtree')
 " タブの使用時に使いやすくする
-call dein#add('jistr/vim-nerdtree-tabs')
+" call dein#add('jistr/vim-nerdtree-tabs')
 
 " Gitを便利に使う
 call dein#add('tpope/vim-fugitive')
