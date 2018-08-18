@@ -44,6 +44,9 @@ call dein#add('ctrlpvim/ctrlp.vim')
 " ヤンクの履歴を使用するのを便利にする
 call dein#add('LeafCage/yankround.vim')
 
+" URLを開けるようにする
+call dein#add('tyru/open-browser.vim')
+
 call dein#end()
 
 " Required:
@@ -122,6 +125,11 @@ let g:lightline = {
 
 " vimを立ち上げた時に自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
+
+" open-browser.vim
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 " NERDTreeで隠しファイルが表示されるようにする
 let NERDTreeShowHidden=1
