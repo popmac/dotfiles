@@ -110,6 +110,14 @@ syntax enable
 " colorscheme solarized
 colorscheme desert
 
+" カーソルラインの設定
+" カラースキーマの指定の後に設定しないと効かない
+set cursorline
+" ctermをnoneにしてunderlineを表示しないようにした
+highlight CursorLine term=reverse cterm=none ctermbg=236
+" インサートモードの時はカーソルラインを表示しない
+autocmd InsertEnter,InsertLeave * set nocursorline!
+
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
 
