@@ -113,6 +113,10 @@ colorscheme desert
 " 行番号の色
 highlight LineNr ctermfg=darkyellow
 
+" インサートモードの時にキャレットを細くする
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
 
