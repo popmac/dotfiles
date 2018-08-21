@@ -102,6 +102,8 @@ set hlsearch
 " 検索ワードの最初の文字を入力した時点で検索を開始する
 set incsearch
 
+"""""""""""""""""""""""""
+
 " 構文ごとに文字色を変化させる
 syntax enable
 " カラースキーマの指定
@@ -122,18 +124,13 @@ highlight LineNr ctermfg=darkyellow
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+"""""""""""""""""""""""""
+
 " vimを立ち上げた時に自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
-
-" open-browser.vim
-" URLにカーソルを置いてgxと打つとURLが開くようにする
-" URLでない場合は単語をGoogle検索する
-let g:netrw_nogx = 1 " disable netrw's gx mapping.
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
 
 " ctrlpで隠しファイルを検索対象にする
 let g:ctrlp_show_hidden = 1
@@ -246,6 +243,15 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 " 起動のキーバインドがctrlpと衝突しているので
 " 自分でカスタマイズしたコマンドを追加
 nnoremap <leader>y :<C-u>Unite yankround<CR>
+
+"""""""""""""""""""""""""
+" open-browser.vimのキーバインド
+"""""""""""""""""""""""""
+" URLにカーソルを置いてgxと打つとURLが開くようにする
+" URLでない場合は単語をGoogle検索する
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 """""""""""""""""""""""""
 " 自動的に閉じ括弧を入力
