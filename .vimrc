@@ -212,6 +212,11 @@ function! LightlineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
+let s:palette = g:lightline#colorscheme#wombat#palette
+" [{文字色}, {背景色}, {カラーターミナルの文字色}, {カラーターミナルの背景色}, {文字装飾（省略可能）}]
+let s:palette.tabline.tabsel = [ [ '#d0d0d0', '#5f8787', 15, 24, 'bold' ] ]
+unlet s:palette
+
 """""""""""""""""""""""""
 " NERDTreeのキーバインド
 """""""""""""""""""""""""
