@@ -16,6 +16,7 @@ call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 
 " ファイルオープンを便利に
 call dein#add('Shougo/unite.vim')
+
 " ファイルをtree表示してくれる
 call dein#add('scrooloose/nerdtree')
 " タブの使用時に使いやすくする
@@ -29,14 +30,12 @@ call dein#add('tpope/vim-endwise')
 
 " インデントに色を付けて見やすくする
 call dein#add('nathanaelkane/vim-indent-guides')
+
 " 行末の半角スペースを可視化
 call dein#add('bronson/vim-trailing-whitespace')
 
 " ステータスラインの見た目を綺麗にする
 call dein#add('itchyny/lightline.vim')
-
-" solarizedのカラースキーマ
-" call dein#add('altercation/vim-colors-solarized')
 
 " ファイル検索を便利にする
 call dein#add('ctrlpvim/ctrlp.vim')
@@ -44,7 +43,7 @@ call dein#add('ctrlpvim/ctrlp.vim')
 " ヤンクの履歴を使用するのを便利にする
 call dein#add('LeafCage/yankround.vim')
 
-" URLを開けるようにする
+" カーソル上のURLを開けるようにする
 call dein#add('tyru/open-browser.vim')
 
 call dein#end()
@@ -104,10 +103,8 @@ set hlsearch
 set incsearch
 
 " 構文ごとに文字色を変化させる
-" syntax on
 syntax enable
 " カラースキーマの指定
-" colorscheme solarized
 colorscheme desert
 
 " カーソルラインの設定
@@ -125,29 +122,31 @@ highlight LineNr ctermfg=darkyellow
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" grep検索の実行後にQuickFix Listを表示する
-autocmd QuickFixCmdPost *grep* cwindow
+""""""""""""""""""""""""""""""
 
 " lightlineのカラースキーマ
 let g:lightline = {
       \ 'colorscheme': 'wombat'
       \ }
 
-""""""""""""""""""""""""""""""
-
 " vimを立ち上げた時に自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 
+" grep検索の実行後にQuickFix Listを表示する
+autocmd QuickFixCmdPost *grep* cwindow
+
 " open-browser.vim
+" URLにカーソルを置いてgxと打つとURLが開くようにする
+" URLでない場合は単語をGoogle検索する
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
-" NERDTreeで隠しファイルが表示されるようにする
-let NERDTreeShowHidden=1
-
 " ctrlpで隠しファイルを検索対象にする
 let g:ctrlp_show_hidden = 1
+
+" NERDTreeで隠しファイルが表示されるようにする
+let NERDTreeShowHidden=1
 
 " vimファイルを開いた時にtreeを表示
 " autocmd VimEnter * execute 'NERDTree'
@@ -159,13 +158,13 @@ let g:ctrlp_show_hidden = 1
 " let g:NERDTreeWinSize = 22
 
 """""""""""""""""""""""""
-" NERDTreeの設定
+" NERDTreeのキーバインド
 """""""""""""""""""""""""
 " NERDTreeの開閉
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""
-" Unite.vimの設定
+" Unite.vimのキーバインド
 """""""""""""""""""""""""
 " ファイル一覧
 noremap <C-N> :Unite -buffer-name=file file<CR>
@@ -180,21 +179,14 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 """""""""""""""""""""""""
-" yankroundの設定
+" yankroundのキーバインド
 """""""""""""""""""""""""
-" READMEに記載されていた基本設定
-" ctrlpのキーマッピングと衝突するのでコメントアウト
-" 代わりに自分でコマンドを追加
+" https://github.com/LeafCage/yankround.vim
+" READMEに記載されていた基本設定は
+" ctrlpのキーマッピングと衝突するので設定していない
 
-" nmap p <Plug>(yankround-p)
-" xmap p <Plug>(yankround-p)
-" nmap P <Plug>(yankround-P)
-" nmap gp <Plug>(yankround-gp)
-" xmap gp <Plug>(yankround-gp)
-" nmap gP <Plug>(yankround-gP)
-" nmap <C-p> <Plug>(yankround-prev)
-" nmap <C-n> <Plug>(yankround-next)
-
+" 起動のキーバインドがctrlpと衝突しているので
+" 自分でカスタマイズしたコマンドを追加
 nnoremap <leader>y :<C-u>Unite yankround<CR>
 
 """""""""""""""""""""""""
