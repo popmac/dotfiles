@@ -17,6 +17,7 @@ fi
 # Editors
 #
 
+# デフォルトではnanoだったのでvimに変更している
 export EDITOR='vim'
 export VISUAL='vim'
 export PAGER='less'
