@@ -2,3 +2,6 @@
 set clipboard+=unnamed
 " vimのモードを表示
 set showmode
+
+" xで文字を削除した時にレジスタに保存しない
+nnoremap x "_x
