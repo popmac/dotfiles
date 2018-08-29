@@ -7,7 +7,7 @@ set columns=100
 " set transparency=20
 
 " フォントの設定
-set guifont=Menlo\ Regular:h16
+set guifont=Menlo\ Regular:h15
 
 " カラースキーム
 " colorscheme koehler
