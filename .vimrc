@@ -46,6 +46,9 @@ call dein#add('LeafCage/yankround.vim')
 " カーソル上のURLを開けるようにする
 call dein#add('tyru/open-browser.vim')
 
+" Dockerfileのシンタックスハイライト
+call dein#add('ekalinin/Dockerfile.vim')
+
 call dein#end()
 
 " Required:
