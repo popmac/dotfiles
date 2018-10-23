@@ -38,3 +38,5 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/usr/local/opt/mysql@5.6/bin:$PATH
 export PATH=/usr/local/opt/qt@5.5/bin:$PATH
 export PATH=/usr/local/opt/imagemagick@6/bin:$PATH
+export ELASTICPATH=/usr/local/opt/elasticsearch@5.6/libexec/bin/
+export PATH=$PATH:$ELASTICPATH
