@@ -5,3 +5,5 @@ set showmode
 
 " xで文字を削除した時にレジスタに保存しない
 nnoremap x "_x
+" Yを押した時にカーソル位置から行末までをヤンクするようにする
+nnoremap Y y$
