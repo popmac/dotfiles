@@ -227,6 +227,8 @@ unlet s:palette
 nnoremap x "_x
 " Yを押した時にカーソル位置から行末までをヤンクするようにする
 nnoremap Y y$
+" ビジュアルモードでペーストした時にレジスタに保存しない
+vnoremap p "_dP
 
 """""""""""""""""""""""""
 " NERDTreeのキーバインド
