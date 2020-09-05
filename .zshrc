@@ -29,6 +29,11 @@ unsetopt histignorealldups
 # 同じコマンドを繰り返しても、履歴に残す
 unsetopt histignoredups
 
+# []などのメタ文字をエスケープしないで使えるようにする
+setopt nonomatch
+# #をエスケープしないで使えるようにする
+setopt interactivecomments
+
 alias ll='ls -alF'
 
 eval "$(rbenv init -)"
