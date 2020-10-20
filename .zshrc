@@ -46,3 +46,4 @@ export PATH=/usr/local/opt/imagemagick@6/bin:$PATH
 export ELASTICPATH=/usr/local/opt/elasticsearch@5.6/libexec/bin/
 export PATH=$PATH:$ELASTICPATH
 export PATH=~/.ghq/github.com/CircleAround/bin:$PATH
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
