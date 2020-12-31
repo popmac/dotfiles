@@ -1,7 +1,7 @@
 " ウィンドウの縦幅
-set lines=40
+set lines=45
 " ウィンドウの横幅
-set columns=120
+set columns=135
 
 " 透明度
 " set transparency=20
