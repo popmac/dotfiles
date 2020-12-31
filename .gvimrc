@@ -1,13 +1,13 @@
 " ウィンドウの縦幅
-set lines=45
+set lines=50
 " ウィンドウの横幅
-set columns=135
+set columns=140
 
 " 透明度
 " set transparency=20
 
 " フォントの設定
-set guifont=Menlo\ Regular:h15
+set guifont=Menlo\ Regular:h14
 
 " カラースキーム
 " colorscheme koehler
