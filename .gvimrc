@@ -7,7 +7,10 @@ set columns=140
 " set transparency=20
 
 " フォントの設定
-set guifont=Menlo\ Regular:h14
+" Mojaveでの設定
+" set guifont=Menlo\ Regular:h14
+" Big Surでの設定
+set guifont=Ricty\ Regular:h14
 
 " カラースキーム
 " colorscheme koehler
