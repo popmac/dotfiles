@@ -7,7 +7,11 @@
 """"""""""""""""""""""""""""""
 " プラグインのセットアップ
 """"""""""""""""""""""""""""""
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+" 2017のmac
+" set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+
+" 2020のmac
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 call dein#begin(expand('~/.vim/dein'))
 
