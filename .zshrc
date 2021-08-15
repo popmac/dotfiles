@@ -38,6 +38,7 @@ alias ll='ls -alF'
 
 eval "$(rbenv init -)"
 eval "$(pyenv init -)"
+eval "$(nodenv init -)"
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH=/usr/local/opt/mysql@5.6/bin:$PATH
